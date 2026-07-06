@@ -93,12 +93,38 @@
   .callout{background:var(--surface);border:1px solid var(--hair);border-radius:12px;padding:14px 16px;font-size:13.5px;color:var(--ink-2)}
   .callout b{color:var(--ink)}
 
+  /* Best-performing copy showcase */
+  .copy2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .msg-card{background:var(--surface);border:1px solid var(--hair);border-radius:14px;padding:18px;display:flex;flex-direction:column}
+  .msg-card .hd{display:flex;align-items:center;gap:8px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+  .msg-card .ch{font-weight:700;color:var(--ink);text-transform:none;letter-spacing:0;font-size:15px}
+  .msg-card .meta{font-size:12.5px;color:var(--ink-2);margin-bottom:12px}
+  .badges{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+  .badge{font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--gold) 16%,transparent);color:var(--gold);border:1px solid color-mix(in srgb,var(--gold) 30%,transparent);font-variant-numeric:tabular-nums}
+  .badge.win{background:color-mix(in srgb,var(--good) 15%,transparent);color:var(--good);border-color:color-mix(in srgb,var(--good) 32%,transparent)}
+  /* WhatsApp bubble */
+  .wa{background:color-mix(in srgb,var(--s2) 8%,var(--surface));border-radius:12px;padding:14px 12px;position:relative}
+  .wa .bubble{background:var(--surface);border:1px solid var(--hair);border-radius:4px 12px 12px 12px;padding:11px 13px;font-size:13.5px;line-height:1.55;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.05);max-width:92%}
+  .wa .bubble .cta{display:inline-block;margin-top:9px;font-weight:600;color:var(--s2)}
+  .wa .tick{font-size:10px;color:var(--muted);text-align:right;margin-top:4px}
+  /* Email preview */
+  .em{border:1px solid var(--hair);border-radius:10px;overflow:hidden;background:var(--surface)}
+  .em .subj{padding:11px 14px;border-bottom:1px solid var(--grid)}
+  .em .from{font-size:12px;color:var(--muted);margin-bottom:3px}
+  .em .from b{color:var(--ink-2)}
+  .em .sl{font-size:14px;font-weight:600;color:var(--ink)}
+  .em .pre{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .em .body{padding:13px 14px;font-size:13px;line-height:1.6;color:var(--ink-2)}
+  .em .body .cta{display:inline-block;margin-top:10px;padding:7px 14px;background:var(--ink);color:var(--surface);border-radius:7px;font-size:12.5px;font-weight:600}
+  .why{font-size:12.5px;color:var(--ink-2);margin-top:12px;padding-top:12px;border-top:1px solid var(--grid)}
+  .why b{color:var(--ink)}
+
   footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--hair);font-size:12px;color:var(--muted)}
 
   svg text{font-family:var(--font)}
   @media (max-width:820px){
     .tiles{grid-template-columns:repeat(2,1fr)}
-    .grid2,.fwd{grid-template-columns:1fr}
+    .grid2,.fwd,.copy2{grid-template-columns:1fr}
     .cols3{grid-template-columns:1fr}
     .barrow{grid-template-columns:130px 1fr 68px}
   }
@@ -272,9 +298,60 @@
     <div class="callout" style="margin-top:14px"><b>Signal:</b> the 2×+ buyer VIP segment is the strongest we've sent to — ₹91.8 K off one send at 9.4× ROI. The ₹1-tester → full-size conversion also works (Men 2.9×). Both become permanent flows, not one-off blasts.</div>
   </section>
 
-  <!-- 4 · SHOPIFY / SEGMENT GROWTH -->
+  <!-- 5 · BEST-PERFORMING COPY -->
+  <section id="copy">
+    <div class="sec-head"><span class="sec-num">05</span><div><h2>Best-performing copy — what actually went out</h2><p class="sec-note">The exact top WhatsApp message and top email from June, with their numbers. This is the voice that's working.</p></div></div>
+    <div class="copy2">
+
+      <div class="msg-card">
+        <div class="hd">🟢 Best WhatsApp · <span class="ch">SH_FathersDay VIP</span></div>
+        <div class="meta">Audience: Loyal — bought 2×+ · sent 13 Jun, 11:00</div>
+        <div class="badges">
+          <span class="badge win">₹91,791 revenue</span>
+          <span class="badge win">9.4× ROI</span>
+          <span class="badge">67 orders</span>
+          <span class="badge">57.6% open</span>
+        </div>
+        <div class="wa">
+          <div class="bubble">
+            You again 👀 The good ones always come back. So you get the Father's Day sale <b>FIRST</b>, before we tell anyone else.<br><br>
+            Upto <b>30% off + extra ₹200 off</b> on ₹2,000+ — go pick dad's scent.
+            <span class="cta">Shop first →</span>
+            <div class="tick">11:00 ✓✓</div>
+          </div>
+        </div>
+        <div class="why"><b>Why it won:</b> led with <b>status, not a deeper discount</b> — early access to the highest-LTV cohort. Same offer as everyone else, but framed as a reward for loyalty. Best ROI of any send this year.</div>
+      </div>
+
+      <div class="msg-card">
+        <div class="hd">✉️ Best Email · <span class="ch">Warm-up 1 — "The Saved Bottle"</span></div>
+        <div class="meta">Founder plain-text letter · sent 12 Jun (warm-up window)</div>
+        <div class="badges">
+          <span class="badge win">₹2,950 revenue</span>
+          <span class="badge">21% open</span>
+          <span class="badge">Plain-text → Primary inbox</span>
+        </div>
+        <div class="em">
+          <div class="subj">
+            <div class="from">From <b>Harshit · Arabian Aroma</b> &nbsp;·&nbsp; reply-to: Harshit</div>
+            <div class="sl">the perfume your dad is "saving" is going bad</div>
+            <div class="pre">He's keeping it for weddings. That's the problem.</div>
+          </div>
+          <div class="body">
+            A personal, typed-looking letter from the founder — no template, no images. Opens on the truth that dad's "good perfume" sits in a drawer until it turns, lands the Father's Day offer, and closes with a founder signature.<br>
+            Offer: <b>PAPA200 — up to 30% off + ₹200 voucher on ₹2,000+</b> (till 21 Jun).
+            <span class="cta">Find his scent here</span>
+          </div>
+        </div>
+        <div class="why"><b>Why it won:</b> plain-text from a real person lands in the <b>Primary inbox</b> during a cold-domain warm-up, and the "saving it / going bad" angle beats a generic sale blast — the top email of the month on a still-warming domain.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6 · SHOPIFY / SEGMENT GROWTH -->
   <section id="shopify">
-    <div class="sec-head"><span class="sec-num">05</span><div><h2>Shopify list &amp; segment growth</h2><p class="sec-note">The owned audience the flows and campaigns run against — every retention segment grew month-on-month.</p></div></div>
+    <div class="sec-head"><span class="sec-num">06</span><div><h2>Shopify list &amp; segment growth</h2><p class="sec-note">The owned audience the flows and campaigns run against — every retention segment grew month-on-month.</p></div></div>
     <div class="card" style="padding:18px">
       <div id="segBars"></div>
       <div class="legend"><span><i class="sw" style="background:var(--s1)"></i>May</span><span><i class="sw" style="background:var(--gold)"></i>June</span></div>
@@ -284,7 +361,7 @@
 
   <!-- 5 · DONE / WIP / NOT DONE -->
   <section id="status">
-    <div class="sec-head"><span class="sec-num">06</span><div><h2>What's done · in progress · not started</h2><p class="sec-note">Straight accountability against the June plan.</p></div></div>
+    <div class="sec-head"><span class="sec-num">07</span><div><h2>What's done · in progress · not started</h2><p class="sec-note">Straight accountability against the June plan.</p></div></div>
     <div class="cols3">
       <div class="col">
         <h3><span class="dot" style="background:var(--chip-done)"></span>Done</h3>
@@ -324,7 +401,7 @@
 
   <!-- 6 · WAY FORWARD -->
   <section id="forward">
-    <div class="sec-head"><span class="sec-num">07</span><div><h2>How I take it further — July plan (Month 2)</h2><p class="sec-note">Complete the journey, bring email fully online, and wake the WooCommerce list. Flows keep doing the heavy lifting; campaigns stay light.</p></div></div>
+    <div class="sec-head"><span class="sec-num">08</span><div><h2>How I take it further — July plan (Month 2)</h2><p class="sec-note">Complete the journey, bring email fully online, and wake the WooCommerce list. Flows keep doing the heavy lifting; campaigns stay light.</p></div></div>
     <div class="fwd">
       <div class="item"><h4>Finish post-purchase — add SMS + RCS</h4><p>Layer SMS/RCS onto confirm/ship/deliver, split above vs below ₹500 AOV, and close out revenue attribution with KwikEngage.</p></div>
       <div class="item"><h4>Browse abandonment — split by crowd</h4><p>₹1-tester viewers → cheap RCS/SMS flow; everyone else → WhatsApp 3-touch, personalised by scent viewed.</p></div>
@@ -337,7 +414,7 @@
 
   <!-- 7 · SANKEY -->
   <section id="sankey">
-    <div class="sec-head"><span class="sec-num">08</span><div><h2>Customer journey — June flow entries</h2><p class="sec-note">Where the 21,034 flow entries went, and which jobs converted to revenue vs are still seeding / awaiting attribution.</p></div></div>
+    <div class="sec-head"><span class="sec-num">09</span><div><h2>Customer journey — June flow entries</h2><p class="sec-note">Where the 21,034 flow entries went, and which jobs converted to revenue vs are still seeding / awaiting attribution.</p></div></div>
     <div class="card" style="padding:20px 12px">
       <div id="sankey"></div>
     </div>
