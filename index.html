@@ -1,4 +1,4 @@
-<title>Arabian Aroma — June 2026 Retention Report</title>
+<title>Arabian Aroma — Retention Report · June &amp; July 2026</title>
 <style>
   :root{
     --plane:#efe9dd; --surface:#faf7f0; --ink:#1c150c; --ink-2:#5f574a; --muted:#8f887a;
@@ -97,16 +97,141 @@
   }
 </style>
 
+<style>
+  .tabbar{position:sticky;top:0;z-index:40;display:flex;gap:6px;justify-content:center;
+    padding:10px 12px;background:color-mix(in srgb,var(--plane) 88%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);margin-bottom:8px}
+  .tabbtn{font:600 13px/1 var(--font);letter-spacing:.02em;color:var(--ink-2);
+    background:transparent;border:1px solid var(--hair);border-radius:999px;
+    padding:9px 18px;cursor:pointer;transition:.16s}
+  .tabbtn:hover{color:var(--ink);border-color:var(--gold-soft)}
+  .tabbtn[aria-selected="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+  .pane{display:none}
+  .pane.on{display:block;animation:fade .22s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  /* comparison table */
+  .cmp{width:100%;border-collapse:collapse;font:14px/1.45 var(--font);margin-top:6px}
+  .cmp th{font:600 11px/1 var(--font);letter-spacing:.09em;text-transform:uppercase;
+    color:var(--muted);text-align:right;padding:0 10px 9px;border-bottom:1px solid var(--hair)}
+  .cmp th:first-child{text-align:left}
+  .cmp td{padding:11px 10px;border-bottom:1px solid var(--hair);text-align:right;
+    font-variant-numeric:tabular-nums;color:var(--ink)}
+  .cmp td:first-child{text-align:left;color:var(--ink-2)}
+  .cmp tr:last-child td{border-bottom:none}
+  .cmp .grp td{background:color-mix(in srgb,var(--gold) 7%,transparent);
+    font:700 10px/1 var(--font);letter-spacing:.11em;text-transform:uppercase;
+    color:var(--gold);padding:8px 10px;text-align:left}
+  .cmp .hi td{font-weight:700;color:var(--ink)}
+  .d{font:600 12px/1 var(--font);white-space:nowrap}
+  .d.u{color:var(--good)} .d.dn{color:var(--bad)} .d.f{color:var(--muted)}
+  .verdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:14px}
+  .vcard{background:var(--surface);border:1px solid var(--hair);border-radius:13px;padding:14px 15px}
+  .vcard .vh{font:700 10px/1 var(--font);letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px}
+  .vcard.win .vh{color:var(--good)} .vcard.watch .vh{color:var(--bad)} .vcard.note .vh{color:var(--s1)}
+  .vcard p{margin:0;font:14px/1.5 var(--font);color:var(--ink-2)}
+  .vcard b{color:var(--ink)}
+  @media(max-width:640px){.tabbtn{padding:8px 13px;font-size:12px}.cmp{font-size:13px}
+    .cmp td,.cmp th{padding-left:6px;padding-right:6px}}
+</style>
+
 <div class="band-wrap">
   <header class="masthead">
     <div class="kicker">Retention · Monthly Report</div>
-    <h1>Arabian Aroma — June 2026</h1>
-    <div class="sub">The retention month in full — <b>what the CRM engine earned and where it's going</b>. Prepared for Harshit.</div>
+    <h1>Arabian Aroma — June &amp; July 2026</h1>
+    <div class="sub">Two months of the CRM engine — <b>what it earned, what changed, and where it goes next</b>. Prepared for Harshit.</div>
     <div class="esp-tag">Platform: <b>KwikEngage</b></div>
   </header>
 </div>
 
+
+<div class="tabbar" role="tablist">
+  <button class="tabbtn" role="tab" aria-selected="true"  data-p="ov">Overview</button>
+  <button class="tabbtn" role="tab" aria-selected="false" data-p="jun">June 2026</button>
+  <button class="tabbtn" role="tab" aria-selected="false" data-p="jul">July 2026</button>
+</div>
+
 <div class="wrap">
+  <div class="pane on" id="p-ov">
+<section id="ov-hero">
+  <div class="sec-head"><div class="eyebrow">Overview</div>
+    <h2>June and July at a glance</h2>
+    <p class="sec-note">Two months of the CRM engine side by side. June was a campaign month carried by Father's Day. July was the month the <b>automations took over</b> — traffic halved, but the store got materially healthier.</p>
+  </div>
+
+  <div class="tiles hero">
+    <div class="tile big"><div class="lab">CRM Revenue · Jun + Jul</div><div class="val">₹3,57,911</div>
+      <div class="foot">₹1,96,366 + ₹1,61,544</div></div>
+    <div class="tile"><div class="lab">Automations Revenue</div><div class="val">₹74,884</div>
+      <div class="foot"><span class="up">▲ 249%</span> vs ₹21,462 in June</div></div>
+    <div class="tile"><div class="lab">Returning Rate</div><div class="val">33.92%</div>
+      <div class="foot"><span class="up">▲ 10.0 pts</span> from 23.91%</div></div>
+    <div class="tile"><div class="lab">AOV</div><div class="val">₹854</div>
+      <div class="foot"><span class="up">▲ 45.8%</span> from ₹586</div></div>
+  </div>
+
+  <div class="callout"><b>The two months in a line:</b> June earned <b>₹1,96,366</b> on the back of Father's Day campaigns.
+  July earned <b>₹1,61,544</b> with less than half the traffic, because flow revenue went from ₹21,462 to
+  <b>₹74,884</b> and returning customers rose to <b>34% of all orders</b>. Topline fell, unit economics improved sharply.</div>
+</section>
+
+<section id="ov-table">
+  <div class="sec-head"><div class="eyebrow">The numbers</div>
+    <h2>Every metric, month over month</h2>
+    <p class="sec-note">Source: Arabian Aroma Master Tracker. May shown in the June tab for reference.</p>
+  </div>
+  <table class="cmp">
+    <thead><tr><th>Metric</th><th>June 2026</th><th>July 2026</th><th>Change</th></tr></thead>
+    <tbody>
+      <tr class="grp"><td colspan="4">Store vitals</td></tr>
+      <tr class=""><td>Shopify revenue</td><td>₹4,822,962</td><td>₹4,519,108</td><td><span class="d dn">▼ 6.3%</span></td></tr>
+      <tr class=""><td>Total orders</td><td>7,081</td><td>4,679</td><td><span class="d dn">▼ 33.9%</span></td></tr>
+      <tr class=""><td>New orders</td><td>5,388</td><td>3,092</td><td><span class="d dn">▼ 42.6%</span></td></tr>
+      <tr class=""><td>Returning orders</td><td>1,693</td><td>1,587</td><td><span class="d dn">▼ 6.3%</span></td></tr>
+      <tr class=""><td>Sessions</td><td>382,787</td><td>238,916</td><td><span class="d dn">▼ 37.6%</span></td></tr>
+      <tr class="hi"><td>AOV</td><td>₹586</td><td>₹854</td><td><span class="d u">▲ 45.8%</span></td></tr>
+      <tr class=""><td>Conversion rate</td><td>1.85%</td><td>1.96%</td><td><span class="d u">▲ 0.11 pts</span></td></tr>
+      <tr class="hi"><td>Returning rate</td><td>23.91%</td><td>33.92%</td><td><span class="d u">▲ 10.01 pts</span></td></tr>
+
+      <tr class="grp"><td colspan="4">CRM performance</td></tr>
+      <tr class="hi"><td>Total CRM revenue</td><td>₹196,366</td><td>₹161,544</td><td><span class="d dn">▼ 17.7%</span></td></tr>
+      <tr class="hi"><td>Automations revenue</td><td>₹21,462</td><td>₹74,884</td><td><span class="d u">▲ 248.9%</span></td></tr>
+      <tr class=""><td>Campaigns revenue</td><td>₹174,904</td><td>₹86,660</td><td><span class="d dn">▼ 50.5%</span></td></tr>
+      <tr class=""><td>Retention share</td><td>4.07%</td><td>3.57%</td><td><span class="d dn">▼ 0.50 pts</span></td></tr>
+
+      <tr class="grp"><td colspan="4">Channel split</td></tr>
+      <tr class=""><td>WhatsApp</td><td>₹192,107</td><td>₹158,117</td><td><span class="d dn">▼ 17.7%</span></td></tr>
+      <tr class=""><td>Email</td><td>₹4,259</td><td>₹3,427</td><td><span class="d dn">▼ 19.5%</span></td></tr>
+      <tr><td>SMS</td><td>—</td><td>—</td><td><span class="d f">not live</span></td></tr>
+
+      <tr class="grp"><td colspan="4">Audience</td></tr>
+      <tr class=""><td>All customers</td><td>118,251</td><td>120,589</td><td><span class="d u">▲ 2.0%</span></td></tr>
+      <tr class=""><td>All prospects</td><td>93,942</td><td>98,447</td><td><span class="d u">▲ 4.8%</span></td></tr>
+      <tr class=""><td>90-day engaged</td><td>59,528</td><td>62,771</td><td><span class="d u">▲ 5.4%</span></td></tr>
+      <tr class=""><td>Bought twice</td><td>11,940</td><td>12,394</td><td><span class="d u">▲ 3.8%</span></td></tr>
+      <tr class=""><td>Bought 3+</td><td>6,131</td><td>6,414</td><td><span class="d u">▲ 4.6%</span></td></tr>
+      <tr class=""><td>₹1 tester pool</td><td>9,523</td><td>10,092</td><td><span class="d u">▲ 6.0%</span></td></tr>
+      <tr class=""><td>Lapsed 180 days</td><td>90,365</td><td>93,251</td><td><span class="d dn">▲ 3.2%</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="verdict">
+    <div class="vcard win"><div class="vh">What won</div>
+      <p><b>Flows.</b> Automation revenue tripled to <b>₹74,884</b> once post-purchase attribution
+      came online. Checkout recovery alone earned <b>₹45,873 at 23× ROI</b>, and Post-delivery
+      returned <b>₹18,376 on ₹68 of spend</b>.</p></div>
+    <div class="vcard win"><div class="vh">What improved</div>
+      <p><b>Order quality.</b> AOV rose <b>46%</b> to ₹854 and returning customers now make up
+      <b>34% of orders</b>, up from 24%. The store is selling less often to better customers.</p></div>
+    <div class="vcard watch"><div class="vh">What to watch</div>
+      <p><b>Traffic.</b> Sessions fell <b>38%</b> and new orders <b>43%</b>. Retention is doing more
+      with less, but the top of funnel needs acquisition support or the returning pool stops refilling.</p></div>
+    <div class="vcard note"><div class="vh">Next lever</div>
+      <p><b>93,251 customers</b> have not bought in 180 days and <b>10,092</b> sit in the ₹1-tester pool.
+      Both are addressable today with winback and tester-to-full-size flows.</p></div>
+  </div>
+</section>
+</div>
+  <div class="pane" id="p-jun">
 
   <!-- HERO -->
   <section id="hero">
@@ -233,8 +358,172 @@
     <a class="sankey-open" href="product-journey.html" target="_blank" rel="noopener">Open the full interactive Sankey ↗</a>
   </section>
 
+  </div>
+  <div class="pane" id="p-jul">
+<section id="jul-hero">
+  <div class="tiles hero">
+    <div class="tile big"><div class="lab">Total CRM Revenue</div><div class="val">₹1,61,544</div>
+      <div class="foot"><span class="down">▼ 17.7%</span> vs ₹1,96,366 in June</div></div>
+    <div class="tile"><div class="lab">Automations Revenue</div><div class="val">₹74,884</div>
+      <div class="foot"><span class="up">▲ 249%</span> flows took over</div></div>
+    <div class="tile"><div class="lab">Returning Rate</div><div class="val">33.92%</div>
+      <div class="foot"><span class="up">▲ 10.0 pts</span> from 23.91%</div></div>
+    <div class="tile"><div class="lab">WhatsApp Revenue</div><div class="val">₹1.58 L</div>
+      <div class="foot">78 campaign orders · 16 sends</div></div>
+  </div>
+  <div class="callout"><b>The month in a line:</b> with sessions down <b>38%</b>, July still earned
+  <b>₹1,61,544</b> because the flow layer finally fired — <b>₹74,884</b> from automations against
+  roughly ₹11 K of spend. AOV climbed to <b>₹854</b> and a third of all orders came from returning customers.</div>
+</section>
+
+<section id="jul-shopify">
+  <div class="sec-head"><div class="eyebrow">01 · Store</div>
+    <h2>Shopify performance</h2>
+    <p class="sec-note">A much quieter traffic month. What arrived, however, converted better and spent far more.</p>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="lab">Revenue</div><div class="val">₹45.2 L</div>
+      <div class="foot"><span class="down">▼ 6.3%</span> from ₹48.2 L</div></div>
+    <div class="tile"><div class="lab">Orders</div><div class="val">4,679</div>
+      <div class="foot"><span class="down">▼ 34%</span> · sessions ▼ 38%</div></div>
+    <div class="tile"><div class="lab">AOV</div><div class="val">₹854</div>
+      <div class="foot"><span class="up">▲ 46%</span> from ₹586</div></div>
+    <div class="tile"><div class="lab">Conversion</div><div class="val">1.96%</div>
+      <div class="foot"><span class="up">▲ 0.11 pt</span> from 1.85%</div></div>
+  </div>
+  <div class="callout"><b>Read this one carefully.</b> Revenue fell only <b>6%</b> while orders fell <b>34%</b>.
+  The gap is AOV, up 46% to ₹854. Returning customers are now <b>33.92% of orders</b> against 23.91% in June,
+  so a shrinking order count is being carried by a much better-quality mix.</div>
+  <div class="splitrow">
+    <div class="splitcard"><div class="mo">June</div><div class="sbar">
+      <div class="nw" style="width:76.1%">New 5,388</div><div class="rt" style="width:23.9%">1,693</div></div></div>
+    <div class="splitcard"><div class="mo">July</div><div class="sbar">
+      <div class="nw" style="width:66.1%">New 3,092</div><div class="rt" style="width:33.9%">1,587</div></div></div>
+    <div class="legend"><span class="ic nw"></span>New orders <span class="ic rt"></span>Returning orders</div>
+  </div>
+</section>
+
+<section id="jul-segments">
+  <div class="sec-head"><div class="eyebrow">02 · Segments</div>
+    <h2>Customer segments &amp; growth</h2>
+    <p class="sec-note">Every pool grew again. The loyalty ladder and the two reactivation pools are where August's work sits.</p>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="lab">All customers</div><div class="val">1,20,589</div><div class="foot"><span class="up">+2.0%</span></div></div>
+    <div class="tile"><div class="lab">Bought once</div><div class="val">1,02,886</div><div class="foot"><span class="up">+1.6%</span></div></div>
+    <div class="tile"><div class="lab">Bought twice</div><div class="val">12,394</div><div class="foot"><span class="up">+3.8%</span></div></div>
+    <div class="tile"><div class="lab">Bought 3+</div><div class="val">6,414</div><div class="foot"><span class="up">+4.6%</span></div></div>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="lab">₹1 tester pool</div><div class="val">10,092</div><div class="foot"><span class="up">+6.0%</span> ready to convert</div></div>
+    <div class="tile"><div class="lab">All prospects</div><div class="val">98,447</div><div class="foot"><span class="up">+4.8%</span></div></div>
+    <div class="tile"><div class="lab">90-day engaged</div><div class="val">62,771</div><div class="foot"><span class="up">+5.4%</span> list health</div></div>
+    <div class="tile"><div class="lab">Lapsed 180 days</div><div class="val">93,251</div><div class="foot"><span class="down">+3.2%</span> deep churn</div></div>
+  </div>
+  <div class="callout attn"><b>The opportunity is unchanged and growing:</b> <b>93,251</b> customers have not
+  bought in 180 days and <b>1,04,440</b> have not bought in 90. July's winback sends proved the segment
+  responds — women's winback returned <b>4.2× ROI</b>. This is August's biggest single lever.</div>
+</section>
+
+<section id="jul-campaign">
+  <div class="sec-head"><div class="eyebrow">03 · Campaign</div>
+    <h2>Campaigns — winbacks and testers took the lead</h2>
+    <p class="sec-note">16 sends · 81 orders · ₹86,660 revenue · ₹40,711 spend · blended ROI 2.1×.</p>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="lab">WhatsApp</div><div class="val">₹83,233</div><div class="foot">10 sends · 78 orders</div></div>
+    <div class="tile"><div class="lab">Email</div><div class="val">₹3,427</div><div class="foot">6 warm-up sends · 3 orders</div></div>
+    <div class="tile"><div class="lab">Best ROI — Browse Test</div><div class="val">6.3×</div><div class="foot">₹15,980 on ₹2,529</div></div>
+    <div class="tile"><div class="lab">Top revenue — Friendship VIP</div><div class="val">₹21,020</div><div class="foot">16,895 sent · 51% open</div></div>
+  </div>
+  <div class="bars">
+    <div class="title">WhatsApp campaigns by revenue <span class="hs">Label shows ROI.</span></div>
+    <div class="barrow"><div class="nm">SH_FriendshipDay_VIP<span class=hs> · 16,895 sent · 51% open</span></div><div class="track"><div class="fill g hot" style="width:100.0%"></div></div><div class="amt">₹21,020</div><div class="roi">1.8×</div></div>
+<div class="barrow"><div class="nm">SH - Browse Test<span class=hs> · 3,436 sent · 56% open</span></div><div class="track"><div class="fill g" style="width:76.0%"></div></div><div class="amt">₹15,980</div><div class="roi">6.3×</div></div>
+<div class="barrow"><div class="nm">KL_ABC_July26<span class=hs> · abandoned checkout</span></div><div class="track"><div class="fill g" style="width:66.8%"></div></div><div class="amt">₹14,042</div><div class="roi">3.6×</div></div>
+<div class="barrow"><div class="nm">SH_Men Winback_March26<span class=hs> · 90-day lapsed men</span></div><div class="track"><div class="fill g" style="width:52.6%"></div></div><div class="amt">₹11,053</div><div class="roi">3.7×</div></div>
+<div class="barrow"><div class="nm">SH - Men Tester 549<span class=hs> · 8,434 sent · 71% open</span></div><div class="track"><div class="fill g" style="width:28.5%"></div></div><div class="amt">₹5,981</div><div class="roi">0.9×</div></div>
+<div class="barrow"><div class="nm">SH_Women Winback_JulyAug25<span class=hs> · best winback ROI</span></div><div class="track"><div class="fill g" style="width:27.3%"></div></div><div class="amt">₹5,729</div><div class="roi">4.2×</div></div>
+<div class="barrow"><div class="nm">SH_Men Winback_July25</div><div class="track"><div class="fill g" style="width:23.9%"></div></div><div class="amt">₹5,027</div><div class="roi">1.4×</div></div>
+<div class="barrow"><div class="nm">SH - Prospect Tester 50/-<span class=hs> · 80% open</span></div><div class="track"><div class="fill g" style="width:12.5%"></div></div><div class="amt">₹2,625</div><div class="roi">0.4×</div></div>
+<div class="barrow"><div class="nm">SH - Women Tester 549</div><div class="track"><div class="fill g" style="width:8.5%"></div></div><div class="amt">₹1,777</div><div class="roi">1.6×</div></div>
+<div class="barrow"><div class="nm">SH_Women Winback_March26<span class=hs> · no orders</span></div><div class="track"><div class="fill g" style="width:2.0%"></div></div><div class="amt">₹0</div><div class="roi">0×</div></div>
+  </div>
+  <div class="callout"><b>What July taught us.</b> The <b>Browse Test</b> was the efficiency winner at
+  <b>6.3× ROI</b> from only 3,436 sends, and abandoned checkout (<b>KL_ABC</b>) returned 3.6×.
+  Tester blasts pulled huge open rates (71–80%) but weak ROI (0.4–0.9×), so the tester pool needs a
+  conversion offer, not another tester offer. Women's winback out-converted men's on ROI, 4.2× against 3.7×.</div>
+</section>
+
+<section id="jul-automation">
+  <div class="sec-head"><div class="eyebrow">04 · Automation</div>
+    <h2>Flows — the engine switched on</h2>
+    <p class="sec-note">~16,000 entries routed · ₹74,884 earned on ~₹11,105 spend · blended ROI 6.7×.</p>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="lab">Automation revenue</div><div class="val">₹74,884</div>
+      <div class="foot"><span class="up">▲ 249%</span> from ₹21,462</div></div>
+    <div class="tile"><div class="lab">Blended flow ROI</div><div class="val">6.7×</div>
+      <div class="foot"><span class="up">from 1.37×</span> in June</div></div>
+    <div class="tile"><div class="lab">Top flow — Checkout</div><div class="val">₹45,873</div>
+      <div class="foot">23.1× ROI · 3,173 entries</div></div>
+    <div class="tile feat"><div class="lab">Best ROI — Post delivery</div><div class="val">271.7×</div>
+      <div class="foot">₹18,376 on ₹68 spend</div></div>
+  </div>
+  <div class="bars">
+    <div class="title">Revenue-earning flows <span class="hs">Entries shown beside each · label shows ROI.</span></div>
+    <div class="barrow"><div class="nm">SH_Checkout<span class=hs> · 3,173 entries</span></div><div class="track"><div class="fill g hot" style="width:100.0%"></div></div><div class="amt">₹45,873</div><div class="roi">23.1×</div></div>
+<div class="barrow"><div class="nm">Post delivery<span class=hs> · 97 entries</span></div><div class="track"><div class="fill g" style="width:40.1%"></div></div><div class="amt">₹18,376</div><div class="roi">271.7×</div></div>
+<div class="barrow"><div class="nm">SH_Delivered_Repeat<span class=hs> · 813 entries</span></div><div class="track"><div class="fill g" style="width:10.4%"></div></div><div class="amt">₹4,767</div><div class="roi">10.2×</div></div>
+<div class="barrow"><div class="nm">VIP Customer 60-day<span class=hs> · 1,195 entries</span></div><div class="track"><div class="fill g" style="width:7.4%"></div></div><div class="amt">₹3,399</div><div class="roi">5.8×</div></div>
+<div class="barrow"><div class="nm">SH - Browse - Prospects<span class=hs> · 784 entries · new</span></div><div class="track"><div class="fill g" style="width:3.1%"></div></div><div class="amt">₹1,410</div><div class="roi">2.9×</div></div>
+<div class="barrow"><div class="nm">SH_COD to Prepaid 751-1000<span class=hs> · 21 entries</span></div><div class="track"><div class="fill g" style="width:2.3%"></div></div><div class="amt">₹1,059</div><div class="roi">74.4×</div></div>
+  </div>
+  <div class="callout"><b>For Harshit:</b> the post-purchase attribution that was pending in June is now
+  reporting, and it changed the picture completely. <b>Post-delivery</b> earned ₹18,376 on ₹68 of spend, and
+  <b>SH_Delivered_Repeat</b> added ₹4,767 at 10.2×. The new <b>Browse Prospects</b> flow went live and
+  returned 2.9× in its first month. Confirm/fulfilment flows still route ~9,400 entries at ₹0 attributed.</div>
+</section>
+
+<section id="jul-next">
+  <div class="sec-head"><div class="eyebrow">05 · Next</div>
+    <h2>Where August goes</h2>
+    <p class="sec-note">Built from what July's data actually proved, not from a template.</p>
+  </div>
+  <div class="verdict">
+    <div class="vcard win"><div class="vh">Scale what worked</div>
+      <p>Browse and checkout recovery are the two most efficient assets in the account.
+      Widen the browse audience and add a second checkout touch.</p></div>
+    <div class="vcard note"><div class="vh">Fix the tester funnel</div>
+      <p><b>10,092</b> people in the ₹1-tester pool. Tester-to-tester offers returned under 1×.
+      Move them to a full-size conversion flow instead.</p></div>
+    <div class="vcard note"><div class="vh">Work the lapsed pool</div>
+      <p><b>93,251</b> at 180 days. Women's winback hit 4.2×. Split by gender and recency and run it monthly,
+      not ad hoc.</p></div>
+    <div class="vcard watch"><div class="vh">Independence Day</div>
+      <p>BOGO Freedom Fest is the August campaign. With AOV at ₹854, the Premium plus Signature
+      pairing should lift it further.</p></div>
+  </div>
+</section>
+</div>
+
   <footer>
-    Arabian Aroma · June 2026 retention report · platform: KwikEngage · source: Weekly Tracker + Performance Report (May–June 2026).
+    Arabian Aroma · June &amp; July 2026 retention report · platform: KwikEngage · source: Arabian Aroma Master Tracker (May–July 2026).
     <span style="cursor:pointer;color:var(--s1)" onclick="var r=document.documentElement,d=r.getAttribute('data-theme')==='dark';r.setAttribute('data-theme',d?'light':'dark')">· toggle theme</span>
   </footer>
 </div>
+
+<script>
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.tabbtn'));
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.setAttribute('aria-selected','false')});
+      b.setAttribute('aria-selected','true');
+      [].slice.call(document.querySelectorAll('.pane')).forEach(function(p){p.classList.remove('on')});
+      document.getElementById('p-'+b.dataset.p).classList.add('on');
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  });
+})();
+</script>
