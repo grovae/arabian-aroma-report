@@ -159,44 +159,40 @@
 </style>
 
 
+
+
+
 <style>
-  /* --- audience split: dark appendix panel, deliberately distinct --- */
-  .aud{background:var(--band);border-radius:20px;padding:30px 28px;color:var(--band-ink);
-    box-shadow:0 18px 40px rgba(0,0,0,.18)}
-  .aud .ahead{border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:16px;margin-bottom:20px}
-  .aud .aeyebrow{font:700 10px/1 var(--font);letter-spacing:.18em;text-transform:uppercase;
-    color:var(--band-accent);margin-bottom:9px}
-  .aud h2{font:600 26px/1.2 var(--display);color:var(--band-ink);margin:0 0 7px}
-  .aud .anote{font:14px/1.55 var(--font);color:rgba(242,231,210,.68);margin:0;max-width:72ch}
-  .aud b{color:#fff}
-  .agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
-  .acard{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11);
-    border-radius:15px;padding:17px 17px 14px}
-  .acard .alist{font:700 10.5px/1 var(--font);letter-spacing:.13em;text-transform:uppercase;color:var(--band-accent)}
-  .acard .aroi{font:700 36px/1 var(--display);margin:11px 0 1px;letter-spacing:-.01em}
-  .acard .aroi small{font:600 13px/1 var(--font);opacity:.6;margin-left:4px}
-  .acard .acap{font:12.5px/1.5 var(--font);color:rgba(242,231,210,.62)}
-  .meter{height:6px;border-radius:4px;background:rgba(255,255,255,.14);margin:14px 0 5px;overflow:hidden}
-  .meter i{display:block;height:100%;border-radius:4px}
-  .mlab{display:flex;justify-content:space-between;font:11.5px/1 var(--font);color:rgba(242,231,210,.6)}
-  .arow{display:flex;justify-content:space-between;font:12.5px/2 var(--font);
-    color:rgba(242,231,210,.72);border-top:1px solid rgba(255,255,255,.09);margin-top:11px;padding-top:4px}
-  .arow b{font-variant-numeric:tabular-nums}
-  .sharewrap{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
-  .sharettl{font:700 10.5px/1 var(--font);letter-spacing:.13em;text-transform:uppercase;
-    color:var(--band-accent);margin-bottom:13px}
-  .sbrow{display:grid;grid-template-columns:96px 1fr;align-items:center;gap:13px;margin-bottom:9px}
-  .sbrow .slab{font:12.5px/1 var(--font);color:rgba(242,231,210,.7)}
-  .sbar2{display:flex;height:26px;border-radius:7px;overflow:hidden}
-  .sbar2 span{display:grid;place-items:center;font:700 11.5px/1 var(--font);color:#1c150c;white-space:nowrap}
-  .skey{display:flex;gap:17px;flex-wrap:wrap;margin-top:12px;font:12px/1 var(--font);color:rgba(242,231,210,.7)}
-  .skey i{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:6px;vertical-align:-1px}
-  .averdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:13px;
-    margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
-  .av{font:13.5px/1.55 var(--font);color:rgba(242,231,210,.75)}
-  .av .avh{font:700 10.5px/1 var(--font);letter-spacing:.11em;text-transform:uppercase;
-    display:block;margin-bottom:7px}
-  @media(max-width:620px){.aud{padding:22px 17px}.aud h2{font-size:22px}.sbrow{grid-template-columns:1fr}}
+  /* --- audience split: editorial appendix, light + ruled --- */
+  .apx{border-top:2px solid var(--gold);padding-top:26px;margin-top:34px}
+  .apx .axk{font:700 10px/1 var(--font);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+  .apx h2{font:600 27px/1.2 var(--display);margin:0 0 8px}
+  .apx .axn{font:14.5px/1.6 var(--font);color:var(--ink-2);margin:0 0 26px;max-width:74ch}
+  .atab{width:100%;border-collapse:collapse;font:14px/1.45 var(--font)}
+  .atab th{font:600 10px/1 var(--font);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+    text-align:right;padding:0 0 12px 18px;border-bottom:1px solid var(--ink)}
+  .atab th:first-child{text-align:left;padding-left:0}
+  .atab td{padding:16px 0 16px 18px;border-bottom:1px solid var(--hair);text-align:right;
+    font-variant-numeric:tabular-nums}
+  .atab td:first-child{text-align:left;padding-left:0}
+  .atab .aname{font-weight:600;color:var(--ink);font-size:15px}
+  .atab .asub{display:block;font:12.5px/1.5 var(--font);color:var(--muted);font-weight:400;margin-top:2px}
+  .atab .big{font:600 19px/1 var(--font);color:var(--ink)}
+  .dlv{display:flex;align-items:center;justify-content:flex-end;gap:9px}
+  .dlv .bar{width:62px;height:5px;border-radius:3px;background:var(--grid);overflow:hidden}
+  .dlv .bar i{display:block;height:100%;border-radius:3px;background:var(--ink-2)}
+  .atab tr.weak td{color:var(--bad)}
+  .atab tr.weak .aname{color:var(--ink)}
+  .atab tr.weak .asub{color:var(--muted)}
+  .apx .axfoot{display:flex;gap:40px;flex-wrap:wrap;margin-top:24px;padding-top:22px;
+    border-top:1px solid var(--hair)}
+  .apx .axf{flex:1 1 230px;font:14px/1.6 var(--font);color:var(--ink-2)}
+  .apx .axf b{color:var(--ink)}
+  .apx .axf .axh{display:block;font:600 11px/1 var(--font);letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink);margin-bottom:8px}
+  .apx .axline{font:15px/1.6 var(--font);color:var(--ink);margin-top:24px;padding-left:16px;
+    border-left:2px solid var(--gold-soft)}
+  @media(max-width:640px){.atab th:nth-child(3),.atab td:nth-child(3){display:none}}
 </style>
 
 <div class="band-wrap">
@@ -1095,77 +1091,44 @@
 </section>
 
 <section id="sep-audience">
-  <div class="aud">
-    <div class="ahead">
-      <div class="aeyebrow">Appendix · Audience split</div>
-      <h2>Where the campaign budget actually went</h2>
-      <p class="anote">September's 16 campaigns ran across three separate lists. This breaks the spend, the reach and the return for each, so it's clear what the <b>.co.in</b> and <b>WordPress</b> audiences are costing against the main <b>.in</b> list.</p>
-    </div>
+  <div class="apx">
+    <div class="axk">Appendix</div>
+    <h2>Where the campaign budget actually went</h2>
+    <p class="axn">September's 16 campaigns ran across three separate lists. Splitting spend, reach and return by list shows what the <b>.co.in</b> and <b>WordPress</b> audiences cost against the main <b>.in</b> list.</p>
 
-    <div class="agrid">
-      <div class="acard">
-        <div class="alist">.in — main list</div>
-        <div class="aroi" style="color:#e8b96a">12.5×<small>ROI</small></div>
-        <div class="acap">12 sends · 457 orders</div>
-        <div class="meter"><i style="width:71%;background:#e8b96a"></i></div>
-        <div class="mlab"><span>Delivered</span><span>71.0%</span></div>
-        <div class="arow"><span>Spend</span><b>₹41,419</b></div>
-        <div class="arow"><span>Revenue</span><b>₹5,18,178</b></div>
-        <div class="arow"><span>Cost per order</span><b>₹91</b></div>
-      </div>
+    <table class="atab">
+      <thead><tr><th>List</th><th>Spend</th><th>Delivered</th><th>Revenue</th><th>Orders</th><th>Cost / order</th><th>ROI</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="aname">.in — main list</span><span class="asub">12 sends · 3,33,579 messages</span></td>
+          <td>₹41,419</td>
+          <td><div class="dlv"><span class="bar"><i style="width:71%"></i></span>71.0%</div></td>
+          <td>₹5,18,178</td><td>457</td><td>₹91</td><td class="big">12.5×</td>
+        </tr>
+        <tr>
+          <td><span class="aname">.co.in customers</span><span class="asub">2 sends · 77,630 messages</span></td>
+          <td>₹12,753</td>
+          <td><div class="dlv"><span class="bar"><i style="width:91.3%"></i></span>91.3%</div></td>
+          <td>₹77,062</td><td>59</td><td>₹216</td><td class="big">6.0×</td>
+        </tr>
+        <tr class="weak">
+          <td><span class="aname">WordPress customers</span><span class="asub">2 sends · 1,07,746 messages</span></td>
+          <td>₹5,190</td>
+          <td><div class="dlv"><span class="bar"><i style="width:26.8%;background:var(--bad)"></i></span>26.8%</div></td>
+          <td>₹15,258</td><td>11</td><td>₹472</td><td class="big" style="color:var(--bad)">2.9×</td>
+        </tr>
+      </tbody>
+    </table>
 
-      <div class="acard">
-        <div class="alist">.co.in customers</div>
-        <div class="aroi" style="color:#5cbfa0">6.0×<small>ROI</small></div>
-        <div class="acap">2 sends · 59 orders</div>
-        <div class="meter"><i style="width:91.3%;background:#5cbfa0"></i></div>
-        <div class="mlab"><span>Delivered</span><span>91.3%</span></div>
-        <div class="arow"><span>Spend</span><b>₹12,753</b></div>
-        <div class="arow"><span>Revenue</span><b>₹77,062</b></div>
-        <div class="arow"><span>Cost per order</span><b>₹216</b></div>
-      </div>
+    <p class="axline"><b>30% of the campaign budget sat outside the .in list and returned 15% of the revenue.</b> The main list earned ₹2.19 per message delivered; WordPress earned ₹0.53.</p>
 
-      <div class="acard" style="border-color:rgba(226,112,108,.4)">
-        <div class="alist" style="color:#e2706c">WordPress customers</div>
-        <div class="aroi" style="color:#e2706c">2.9×<small>ROI</small></div>
-        <div class="acap">2 sends · 11 orders</div>
-        <div class="meter"><i style="width:26.8%;background:#e2706c"></i></div>
-        <div class="mlab"><span>Delivered</span><span style="color:#e2706c;font-weight:700">26.8%</span></div>
-        <div class="arow"><span>Spend</span><b>₹5,190</b></div>
-        <div class="arow"><span>Revenue</span><b>₹15,258</b></div>
-        <div class="arow"><span>Cost per order</span><b style="color:#e2706c">₹472</b></div>
-      </div>
-    </div>
-
-    <div class="sharewrap">
-      <div class="sharettl">Share of spend vs share of revenue</div>
-      <div class="sbrow"><div class="slab">Spend</div>
-        <div class="sbar2">
-          <span style="width:69.8%;background:#e8b96a">.in 69.8%</span>
-          <span style="width:21.5%;background:#5cbfa0">21.5%</span>
-          <span style="width:8.7%;background:#e2706c">8.7%</span>
-        </div></div>
-      <div class="sbrow"><div class="slab">Revenue</div>
-        <div class="sbar2">
-          <span style="width:84.9%;background:#e8b96a">.in 84.9%</span>
-          <span style="width:12.6%;background:#5cbfa0">12.6%</span>
-          <span style="width:2.5%;background:#e2706c"></span>
-        </div></div>
-      <div class="skey">
-        <span><i style="background:#e8b96a"></i>.in main list</span>
-        <span><i style="background:#5cbfa0"></i>.co.in</span>
-        <span><i style="background:#e2706c"></i>WordPress</span>
-        <span style="margin-left:auto;color:var(--band-accent);font-weight:600">30% of spend sat outside .in and returned 15% of revenue</span>
-      </div>
-    </div>
-
-    <div class="averdict">
-      <div class="av"><span class="avh" style="color:#e2706c">Clean WordPress first</span>
-        1,07,746 messages for <b>11 orders</b>. Only a quarter were delivered, which points to stale numbers rather than weak copy. Validate the list and re-test small before spending again.</div>
-      <div class="av"><span class="avh" style="color:#5cbfa0">Keep .co.in, aim it tighter</span>
-        Delivery is <b>91.3%</b>, better than the main list. The targeted 1x send returned <b>13.0×</b>; the broad closing send only <b>2.1×</b>. Same precision rule as .in.</div>
-      <div class="av"><span class="avh" style="color:#e8b96a">Concentrate on .in</span>
-        70% of spend produced <b>85% of revenue</b> at ₹91 an order. The WordPress budget moved here would have earned roughly <b>₹65,000</b> instead of ₹15,258.</div>
+    <div class="axfoot">
+      <div class="axf"><span class="axh">Clean WordPress first</span>
+        1,07,746 messages produced <b>11 orders</b>. Only a quarter were delivered, which points to stale numbers rather than weak copy. Validate the list and re-test on a small batch before spending again.</div>
+      <div class="axf"><span class="axh">Keep .co.in, aim it tighter</span>
+        Delivery is <b>91.3%</b>, better than the main list. The targeted 1x send returned <b>13.0×</b> while the broad closing send returned <b>2.1×</b> — the same precision rule as .in.</div>
+      <div class="axf"><span class="axh">Concentrate on .in</span>
+        70% of spend produced <b>85% of revenue</b> at ₹91 an order. The WordPress budget spent here instead would have earned roughly <b>₹65,000</b>.</div>
     </div>
   </div>
 </section>
