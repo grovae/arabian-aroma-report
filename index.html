@@ -158,6 +158,47 @@
     border-left:2px solid var(--gold-soft);padding-left:9px}
 </style>
 
+
+<style>
+  /* --- audience split: dark appendix panel, deliberately distinct --- */
+  .aud{background:var(--band);border-radius:20px;padding:30px 28px;color:var(--band-ink);
+    box-shadow:0 18px 40px rgba(0,0,0,.18)}
+  .aud .ahead{border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:16px;margin-bottom:20px}
+  .aud .aeyebrow{font:700 10px/1 var(--font);letter-spacing:.18em;text-transform:uppercase;
+    color:var(--band-accent);margin-bottom:9px}
+  .aud h2{font:600 26px/1.2 var(--display);color:var(--band-ink);margin:0 0 7px}
+  .aud .anote{font:14px/1.55 var(--font);color:rgba(242,231,210,.68);margin:0;max-width:72ch}
+  .aud b{color:#fff}
+  .agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+  .acard{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11);
+    border-radius:15px;padding:17px 17px 14px}
+  .acard .alist{font:700 10.5px/1 var(--font);letter-spacing:.13em;text-transform:uppercase;color:var(--band-accent)}
+  .acard .aroi{font:700 36px/1 var(--display);margin:11px 0 1px;letter-spacing:-.01em}
+  .acard .aroi small{font:600 13px/1 var(--font);opacity:.6;margin-left:4px}
+  .acard .acap{font:12.5px/1.5 var(--font);color:rgba(242,231,210,.62)}
+  .meter{height:6px;border-radius:4px;background:rgba(255,255,255,.14);margin:14px 0 5px;overflow:hidden}
+  .meter i{display:block;height:100%;border-radius:4px}
+  .mlab{display:flex;justify-content:space-between;font:11.5px/1 var(--font);color:rgba(242,231,210,.6)}
+  .arow{display:flex;justify-content:space-between;font:12.5px/2 var(--font);
+    color:rgba(242,231,210,.72);border-top:1px solid rgba(255,255,255,.09);margin-top:11px;padding-top:4px}
+  .arow b{font-variant-numeric:tabular-nums}
+  .sharewrap{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+  .sharettl{font:700 10.5px/1 var(--font);letter-spacing:.13em;text-transform:uppercase;
+    color:var(--band-accent);margin-bottom:13px}
+  .sbrow{display:grid;grid-template-columns:96px 1fr;align-items:center;gap:13px;margin-bottom:9px}
+  .sbrow .slab{font:12.5px/1 var(--font);color:rgba(242,231,210,.7)}
+  .sbar2{display:flex;height:26px;border-radius:7px;overflow:hidden}
+  .sbar2 span{display:grid;place-items:center;font:700 11.5px/1 var(--font);color:#1c150c;white-space:nowrap}
+  .skey{display:flex;gap:17px;flex-wrap:wrap;margin-top:12px;font:12px/1 var(--font);color:rgba(242,231,210,.7)}
+  .skey i{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:6px;vertical-align:-1px}
+  .averdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:13px;
+    margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)}
+  .av{font:13.5px/1.55 var(--font);color:rgba(242,231,210,.75)}
+  .av .avh{font:700 10.5px/1 var(--font);letter-spacing:.11em;text-transform:uppercase;
+    display:block;margin-bottom:7px}
+  @media(max-width:620px){.aud{padding:22px 17px}.aud h2{font-size:22px}.sbrow{grid-template-columns:1fr}}
+</style>
+
 <div class="band-wrap">
   <header class="masthead">
     <div class="kicker">Retention · Monthly Report</div>
@@ -1054,55 +1095,78 @@
 </section>
 
 <section id="sep-audience">
-  <div class="sec-head"><div class="eyebrow">08 · Audience split</div>
-    <h2>Where the campaign budget actually went</h2>
-    <p class="sec-note">September's 16 sends split across three audiences: the main <b>.in</b> list, the <b>.co.in</b> customer list, and the <b>WordPress</b> customer list. Campaigns are assigned by name.</p>
-  </div>
+  <div class="aud">
+    <div class="ahead">
+      <div class="aeyebrow">Appendix · Audience split</div>
+      <h2>Where the campaign budget actually went</h2>
+      <p class="anote">September's 16 campaigns ran across three separate lists. This breaks the spend, the reach and the return for each, so it's clear what the <b>.co.in</b> and <b>WordPress</b> audiences are costing against the main <b>.in</b> list.</p>
+    </div>
 
-  <div class="tiles">
-    <div class="tile"><div class="lab">.in — main list</div><div class="val">12.5×</div>
-      <div class="foot">₹5,18,178 on ₹41,419 · 457 orders</div></div>
-    <div class="tile"><div class="lab">.co.in list</div><div class="val">6.0×</div>
-      <div class="foot">₹77,062 on ₹12,753 · 59 orders</div></div>
-    <div class="tile"><div class="lab">WordPress list</div><div class="val">2.9×</div>
-      <div class="foot">₹15,258 on ₹5,190 · 11 orders</div></div>
-    <div class="tile feat"><div class="lab">Spend outside .in</div><div class="val">30%</div>
-      <div class="foot">returned just 15% of revenue</div></div>
-  </div>
+    <div class="agrid">
+      <div class="acard">
+        <div class="alist">.in — main list</div>
+        <div class="aroi" style="color:#e8b96a">12.5×<small>ROI</small></div>
+        <div class="acap">12 sends · 457 orders</div>
+        <div class="meter"><i style="width:71%;background:#e8b96a"></i></div>
+        <div class="mlab"><span>Delivered</span><span>71.0%</span></div>
+        <div class="arow"><span>Spend</span><b>₹41,419</b></div>
+        <div class="arow"><span>Revenue</span><b>₹5,18,178</b></div>
+        <div class="arow"><span>Cost per order</span><b>₹91</b></div>
+      </div>
 
-  <table class="cmp" style="margin-top:14px">
-    <thead><tr><th>Audience</th><th>Sends</th><th>Messages sent</th><th>Delivered</th><th>Delivery</th><th>Spend</th><th>Revenue</th><th>Orders</th><th>ROI</th></tr></thead>
-    <tbody>
-      <tr class="hi"><td>.in — main list</td><td>12</td><td>3,33,579</td><td>2,36,927</td><td>71.0%</td><td>₹41,419</td><td>₹5,18,178</td><td>457</td><td><span class="d u">12.5×</span></td></tr>
-      <tr><td>.co.in customers</td><td>2</td><td>77,630</td><td>70,841</td><td>91.3%</td><td>₹12,753</td><td>₹77,062</td><td>59</td><td><span class="d u">6.0×</span></td></tr>
-      <tr><td>WordPress customers</td><td>2</td><td>1,07,746</td><td>28,835</td><td><span class="d dn">26.8%</span></td><td>₹5,190</td><td>₹15,258</td><td>11</td><td><span class="d dn">2.9×</span></td></tr>
-      <tr class="grp"><td colspan="9">Efficiency per audience</td></tr>
-      <tr><td>Revenue per delivered message</td><td colspan="4">.in ₹2.19 · .co.in ₹1.09 · WordPress ₹0.53</td><td colspan="4">.in earns 4× what WordPress earns per message landed</td></tr>
-      <tr><td>Cost per order</td><td colspan="4">.in ₹91 · .co.in ₹216 · WordPress ₹472</td><td colspan="4">a WordPress order costs 5× an .in order</td></tr>
-      <tr><td>Share of spend vs revenue</td><td colspan="4">.in 69.8% spend → 84.9% revenue</td><td colspan="4">.co.in + WordPress 30.2% spend → 15.1% revenue</td></tr>
-    </tbody>
-  </table>
+      <div class="acard">
+        <div class="alist">.co.in customers</div>
+        <div class="aroi" style="color:#5cbfa0">6.0×<small>ROI</small></div>
+        <div class="acap">2 sends · 59 orders</div>
+        <div class="meter"><i style="width:91.3%;background:#5cbfa0"></i></div>
+        <div class="mlab"><span>Delivered</span><span>91.3%</span></div>
+        <div class="arow"><span>Spend</span><b>₹12,753</b></div>
+        <div class="arow"><span>Revenue</span><b>₹77,062</b></div>
+        <div class="arow"><span>Cost per order</span><b>₹216</b></div>
+      </div>
 
-  <div class="callout attn"><b>The WordPress list is the problem, and it isn't the copy.</b> Only <b>26.8%</b>
-  of messages to it were delivered — 14% on the 1x send and 39.6% on the closing send. Those are numbers
-  that say the phone data is stale or the numbers were never opted in on WhatsApp. It cost <b>₹472 per order</b>
-  against ₹91 on the main list.</div>
+      <div class="acard" style="border-color:rgba(226,112,108,.4)">
+        <div class="alist" style="color:#e2706c">WordPress customers</div>
+        <div class="aroi" style="color:#e2706c">2.9×<small>ROI</small></div>
+        <div class="acap">2 sends · 11 orders</div>
+        <div class="meter"><i style="width:26.8%;background:#e2706c"></i></div>
+        <div class="mlab"><span>Delivered</span><span style="color:#e2706c;font-weight:700">26.8%</span></div>
+        <div class="arow"><span>Spend</span><b>₹5,190</b></div>
+        <div class="arow"><span>Revenue</span><b>₹15,258</b></div>
+        <div class="arow"><span>Cost per order</span><b style="color:#e2706c">₹472</b></div>
+      </div>
+    </div>
 
-  <div class="callout"><b>.co.in is a different case.</b> Delivery is healthy at <b>91.3%</b>, better than the
-  main list, and it returns <b>6.0×</b>. It just earns half as much per message as .in. It's worth keeping,
-  but the ₹8,165 spent on the broad "Ends — co.in all" send returned only 2.1× while the targeted
-  "co.in 1x" send returned 13.0× — the same precision lesson as the main list.</div>
+    <div class="sharewrap">
+      <div class="sharettl">Share of spend vs share of revenue</div>
+      <div class="sbrow"><div class="slab">Spend</div>
+        <div class="sbar2">
+          <span style="width:69.8%;background:#e8b96a">.in 69.8%</span>
+          <span style="width:21.5%;background:#5cbfa0">21.5%</span>
+          <span style="width:8.7%;background:#e2706c">8.7%</span>
+        </div></div>
+      <div class="sbrow"><div class="slab">Revenue</div>
+        <div class="sbar2">
+          <span style="width:84.9%;background:#e8b96a">.in 84.9%</span>
+          <span style="width:12.6%;background:#5cbfa0">12.6%</span>
+          <span style="width:2.5%;background:#e2706c"></span>
+        </div></div>
+      <div class="skey">
+        <span><i style="background:#e8b96a"></i>.in main list</span>
+        <span><i style="background:#5cbfa0"></i>.co.in</span>
+        <span><i style="background:#e2706c"></i>WordPress</span>
+        <span style="margin-left:auto;color:var(--band-accent);font-weight:600">30% of spend sat outside .in and returned 15% of revenue</span>
+      </div>
+    </div>
 
-  <div class="verdict">
-    <div class="vcard watch"><div class="vh">Clean WordPress before sending again</div>
-      <p>1,07,746 messages for <b>11 orders</b>. Validate the numbers, drop the undeliverable ones,
-      and re-test on a small batch before spending on it again.</p></div>
-    <div class="vcard note"><div class="vh">Keep .co.in, target it tighter</div>
-      <p>The 1x segment returned <b>13.0×</b>, the broad send <b>2.1×</b>. Treat it like the
-      main list: targeted segments only.</p></div>
-    <div class="vcard win"><div class="vh">Concentrate on .in</div>
-      <p>70% of spend produced <b>85% of revenue</b> at ₹91 an order. Moving the WordPress budget here
-      would have earned roughly ₹65,000 instead of ₹15,258.</p></div>
+    <div class="averdict">
+      <div class="av"><span class="avh" style="color:#e2706c">Clean WordPress first</span>
+        1,07,746 messages for <b>11 orders</b>. Only a quarter were delivered, which points to stale numbers rather than weak copy. Validate the list and re-test small before spending again.</div>
+      <div class="av"><span class="avh" style="color:#5cbfa0">Keep .co.in, aim it tighter</span>
+        Delivery is <b>91.3%</b>, better than the main list. The targeted 1x send returned <b>13.0×</b>; the broad closing send only <b>2.1×</b>. Same precision rule as .in.</div>
+      <div class="av"><span class="avh" style="color:#e8b96a">Concentrate on .in</span>
+        70% of spend produced <b>85% of revenue</b> at ₹91 an order. The WordPress budget moved here would have earned roughly <b>₹65,000</b> instead of ₹15,258.</div>
+    </div>
   </div>
 </section>
 
